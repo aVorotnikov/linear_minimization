@@ -22,5 +22,6 @@ for eps in Task.accuracy():
 print("Golden section:")
 method(gs.solve)
 phi = (1 + math.sqrt(5)) / 2
+print("Predictions:")
 for eps in Task.accuracy():
     print(str(eps) + ": " + str(math.floor(math.log(l / eps, phi)) + 2))
