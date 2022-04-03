@@ -6,8 +6,8 @@ from task import Task
 def method(solve):
     for eps in Task.accuracy():
         task = Task()
-        (x, f) = solve(task, eps)
-        print(str(eps) + ": " + "f(" + str(x) + ")=" + str(f) + "; f count: " + str(task.get_count()))
+        x = solve(task, eps)
+        print(str(eps) + ": " + "f(" + str(x) + ")=" + str(Task.f(x)) + "; f count: " + str(task.get_count()))
 
 
 print("Bisection:")

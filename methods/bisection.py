@@ -1,6 +1,6 @@
 def solve(task, eps):
     (a, b) = task.limits()
-    while b - a > eps:
+    while b - a >= eps:
         m = (a + b) / 2
         left = task.f_count(m - task.get_delta())
         right = task.f_count(m + task.get_delta())
@@ -8,5 +8,4 @@ def solve(task, eps):
             b = m
         else:
             a = m
-    m = (a + b) / 2
-    return (m, task.f_count(m))
+    return (a + b) / 2
