@@ -18,8 +18,10 @@ def solve(task, eps):
             a = a1
             need_eval_b = True
             a1 = b1
+            fa = fb
         else:
             b = b1
             need_eval_b = False
             b1 = a1
+            fb = fa
     return (a + b) / 2
