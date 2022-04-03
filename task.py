@@ -11,7 +11,7 @@ class Task:
 
     def f_count(self, x):
         self.count += 1
-        return x * math.sin(x) + 2 * math.cos(x)
+        return Task.f(x)
 
 
     def get_count(self):
