@@ -24,5 +24,10 @@ class Task:
 
 
     @staticmethod
+    def get_delta():
+        return 0.02
+
+
+    @staticmethod
     def accuracy():
         return [0.1, 0.01, 0.001];
