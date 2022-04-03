@@ -1,6 +1,7 @@
 from methods import bisection as bs
 from methods import golden_section as gs
 from task import Task
+import math
 
 
 def method(solve):
@@ -12,6 +13,14 @@ def method(solve):
 
 print("Bisection:")
 method(bs.solve)
+print("Predictions:")
+(a, b) = Task.limits()
+l = b - a
+for eps in Task.accuracy():
+    print(str(eps) + ": " + str(2 * (math.floor(math.log2(l / eps)) + 1)))
 
 print("Golden section:")
 method(gs.solve)
+phi = (1 + math.sqrt(5)) / 2
+for eps in Task.accuracy():
+    print(str(eps) + ": " + str(math.floor(math.log(l / eps, phi)) + 2))
