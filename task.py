@@ -30,4 +30,4 @@ class Task:
 
     @staticmethod
     def accuracy():
-        return [0.1, 0.01, 0.001];
+        return [0.1, 0.01, 0.001, 0.0001];
